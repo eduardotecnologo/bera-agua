@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Box, Button, HStack, Text, VStack, useToast } from 'native-base';
+import { UserContext } from '../context/userContext'; 
 
 interface IDashboardProps {
     
 }
 
 export const Dashboard: React.FC<IDashboardProps> = () => {
+    const {goal} = useContext(UserContext);
     const [copoSize, setCopoSize] = useState<number>(250);
     const [water, setWater] = useState<number>(0);
-    const [goal, setGoal] = useState<number>(2000);
     const toast = useToast();
 
     const handleWater = () =>{

@@ -3,6 +3,7 @@ import { NavigationContainer, ParamListBase } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { View, Text } from 'native-base';
 import { Dashboard } from '../screens/Dashboard';
+import ProfileScreen from '../screens/ProfileScreen';
 
 type ITabsRoutes = {
     Settings:  undefined;
@@ -34,7 +35,7 @@ export const Routes: React.FunctionComponent<IMyApps> = () => {
                     tabBarIcon: () => <Icon name="dashboard" size={20} color="blue"/>}} />
             
             <Tab.Screen 
-                name="Profile" component={Screen}
+                name="Profile" component={ProfileScreen}
                 options={{
                     title: 'Prefil',
                     tabBarIcon: () => <Icon name="user" size={20} color="blue"/>}} />
